@@ -1,0 +1,4 @@
+bool state
+int64 speed
+---
+bool is_successful

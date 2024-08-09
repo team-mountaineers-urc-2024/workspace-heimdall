@@ -1,0 +1,5 @@
+int32 integration_time
+---
+float64[] wavelengths
+float64[] intensities
+bool is_successful

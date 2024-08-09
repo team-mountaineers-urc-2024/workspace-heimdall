@@ -1,0 +1,267 @@
+<?xml version="1.0"?>
+<robot name="origins">
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="1.0 1.0 0.001"/>
+      </geometry>
+      <material name="light_grey">
+        <color rgba="0.4 0.4 0.4 1.0"/>
+      </material>
+    </visual>
+  </link>
+
+  <link name="right_motor">
+    <visual>
+      <geometry>
+        <cylinder radius="0.061" length="0.059"/>
+      </geometry>
+      <origin rpy="1.57079632679 0 0" xyz="0 0 0"/>
+      <material name="almost_black">
+        <color rgba="0.1 0.1 0.1 1.0"/>
+      </material>
+    </visual>
+  </link>
+
+  <link name="left_motor">
+    <visual>
+      <geometry>
+        <cylinder radius="0.061" length="0.059"/>
+      </geometry>
+      <origin rpy="1.57079632679 0 0" xyz="0 0 0"/>
+      <material name="almost_black">
+        <color rgba="0.1 0.1 0.1 1.0"/>
+      </material>
+    </visual>
+  </link>
+
+  <link name="mid_bar">
+    <visual>
+      <geometry>
+        <cylinder radius="0.015" length="0.104"/>
+      </geometry>
+      <origin rpy="1.57079632679 0 0" xyz="0 0 0"/>
+      <material name="grey">
+        <color rgba="0.7 0.7 0.7 1.0"/>
+      </material>
+    </visual>
+  </link>
+
+  <link name="bottom_stick_l">
+    <visual>
+      <geometry>
+        <box size="0.03 0.02 0.4462"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0.2231"/>
+    </visual>
+  </link>
+
+  <link name="bottom_stick_r">
+    <visual>
+      <geometry>
+        <box size="0.03 0.02 0.4462"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0.2231"/>
+    </visual>
+  </link>
+
+  <link name="mid_mid_bar">
+    <visual>
+      <geometry>
+        <cylinder radius="0.015" length="0.0693"/>
+      </geometry>
+      <origin rpy="1.57079632679 0 0" xyz="0 0 0"/>
+      <material name="grey">
+        <color rgba="0.7 0.7 0.7 1.0"/>
+      </material>
+    </visual>
+  </link>
+
+  <link name="top_stick">
+    <visual>
+      <geometry>
+        <box size="0.03 0.02 0.40633"/>
+      </geometry>
+      <origin rpy="0 1.57079632679 0" xyz="0.203165 0 0"/>
+    </visual>
+  </link>
+
+  <link name="pitch_motor">
+    <visual>
+      <geometry>
+        <cylinder radius="0.038" length="0.031"/>
+      </geometry>
+      <origin rpy="1.57079632679 0 0" xyz="0 0 0"/>
+      <material name="almost_black">
+        <color rgba="0.1 0.1 0.1 1.0"/>
+      </material>
+    </visual>
+  </link>
+
+  <link name="joint_box">
+    <visual>
+      <geometry>
+        <box size="0.05324 0.10653 0.080"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0.02662 0 0"/>
+      <material name="grey">
+        <color rgba="0.7 0.7 0.7 1.0"/>
+      </material>
+    </visual>
+  </link>
+
+  <link name="roll_motor">
+    <visual>
+      <geometry>
+        <cylinder radius="0.0395" length="0.029"/>
+      </geometry>
+      <origin rpy="0 1.57079632679 0" xyz="0 0 0"/>
+      <material name="almost_black">
+        <color rgba="0.1 0.1 0.1 1.0"/>
+      </material>
+    </visual>
+  </link>
+
+  <link name="roll_nub">
+    <visual>
+      <geometry>
+        <cylinder radius="0.02" length="0.00935"/>
+      </geometry>
+      <origin rpy="0 1.57079632679 0" xyz="0 0 0"/>
+      <material name="grey">
+        <color rgba="0.7 0.7 0.7 1.0"/>
+      </material>
+    </visual>
+  </link>
+
+  <link name="gripper_carrier">
+    <visual>
+      <geometry>
+        <box size="0.02064 0.2254 0.03175"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0.01032 0.06787 0"/>
+      <material name="grey">
+        <color rgba="0.7 0.7 0.7 1.0"/>
+      </material>
+    </visual>
+  </link>
+  
+  <link name="fixed_gripper">
+    <visual>
+      <geometry>
+        <box size="0.1239 0.03175 0.03175"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="almost_black">
+        <color rgba="0.1 0.1 0.1 1.0"/>
+      </material>
+    </visual>
+  </link>
+
+  <link name="moving_gripper">
+    <visual>
+      <geometry>
+        <box size="0.1239 0.03175 0.03175"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="almost_black">
+        <color rgba="0.1 0.1 0.1 1.0"/>
+      </material>
+    </visual>
+  </link>
+
+  <joint name="base_to_right_motor" type="fixed">
+    <parent link="base_link"/>
+    <child link="right_motor"/>
+    <origin xyz="0 0.0815 0.061" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="base_to_left_motor" type="fixed">
+    <parent link="base_link"/>
+    <child link="left_motor"/>
+    <origin xyz="0 -0.0815 0.061" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="right_motor_to_mid" type="continuous">
+    <parent link="right_motor"/>
+    <child link="mid_bar"/>
+    <origin xyz="0 -0.0815 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <joint name="left_motor_to_stick_1" type="continuous">
+    <parent link="left_motor"/>
+    <child link="bottom_stick_l"/>
+    <origin xyz="0 0.05685 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <joint name="left_motor_to_stick_r" type="continuous">
+    <parent link="left_motor"/>
+    <child link="bottom_stick_r"/>
+    <origin xyz="0 0.10615 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <mimic joint="left_motor_to_stick_1" multiplier="1" offset="0" />
+  </joint>
+
+  <joint name="stick_r_to_mid_mid" type="fixed">
+    <parent link="bottom_stick_r"/>
+    <child link="mid_mid_bar"/>
+    <origin xyz="0 -0.02465 0.4462" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <joint name="mid_mid_to_top_stick" type="continuous">
+    <parent link="mid_mid_bar"/>
+    <child link="top_stick"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <joint name="top_stick_to_pitch" type="fixed">
+    <parent link="top_stick"/>
+    <child link="pitch_motor"/>
+    <origin xyz="0.40633 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="pitch_to_joint_box" type="continuous">
+    <parent link="pitch_motor"/>
+    <child link="joint_box"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <joint name="joint_box_to_roll" type="fixed">
+    <parent link="joint_box"/>
+    <child link="roll_motor"/>
+    <origin xyz="0.06774 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="roll_to_nub" type="fixed">
+    <parent link="roll_motor"/>
+    <child link="roll_nub"/>
+    <origin xyz="0.019175 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="nub_to_carrier" type="continuous">
+    <parent link="roll_nub"/>
+    <child link="gripper_carrier"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+  </joint>
+
+  <joint name="carrier_to_fixed_gripper" type="fixed">
+    <parent link="gripper_carrier"/>
+    <child link="fixed_gripper"/>
+    <origin xyz="0.08259 -0.028955 0" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="carrier_to_moving_gripper" type="prismatic">
+    <parent link="gripper_carrier"/>
+    <child link="moving_gripper"/>
+    <origin xyz="0.08259 0.002795 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="0.0" upper="0.1619" effort="1000.0" velocity="1000.0"/>
+  </joint>
+
+</robot>

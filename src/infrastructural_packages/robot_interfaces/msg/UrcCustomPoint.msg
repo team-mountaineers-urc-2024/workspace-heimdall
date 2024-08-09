@@ -1,0 +1,5 @@
+geometry_msgs/PointStamped point
+string location_label
+float64 error_radius
+uint8 aruco_id
+uint8 aruco_id_2

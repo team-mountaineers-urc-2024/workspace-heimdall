@@ -1,0 +1,4 @@
+string type_to_check
+string list
+---
+WaypointObject marker_to_return

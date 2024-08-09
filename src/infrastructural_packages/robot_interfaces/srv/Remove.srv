@@ -1,0 +1,4 @@
+int64 index_to_remove
+---
+geometry_msgs/PointStamped[] list
+string message

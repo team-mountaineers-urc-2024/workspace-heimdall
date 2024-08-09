@@ -1,0 +1,5 @@
+WaypointObject waypoint
+string list
+---
+geometry_msgs/PointStamped[] list
+string message

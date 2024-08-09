@@ -1,0 +1,13 @@
+# Request
+UrcCustomPoint waypoint
+float32 detect_threshold 20.0
+float32 stop_threshold 1.0
+float32 rate 1.0
+---
+# Result
+string result
+---
+# Feedback
+float32 distance
+bool marker_look
+bool marker_seen

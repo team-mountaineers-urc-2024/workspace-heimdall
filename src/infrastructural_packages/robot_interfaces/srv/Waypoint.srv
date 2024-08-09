@@ -1,0 +1,8 @@
+float64 latitude
+float64 longitude
+float64 altitude
+string type
+string type_descriptor
+---
+string message
+WaypointObject[] list

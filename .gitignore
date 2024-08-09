@@ -1,0 +1,21 @@
+src/autonomy/*
+src/hardware_interfacing/*
+src/control_packages/*
+src/infrastructural_packages/comms_heartbeat_pkg
+src/infrastructural_packages/simulation2024
+src/sensor_interfacing/*
+src/computing_packages/*
+src/user_interfacing/*
+
+# # Build files
+build
+install
+log
+.vscode
+
+# # miscellaneous
+*.swp
+*.svg
+*.pyc
+*/__pycache__
+__pycache__

@@ -1,0 +1,46 @@
+teleop_twist_joy_node:
+  ros__parameters:
+    axis_linear:  # Left thumb stick vertical
+      x: 1
+    scale_linear:
+      x: 1.0
+    scale_linear_turbo:
+      x: 2.0
+
+    axis_angular:  # Left thumb stick horizontal
+      yaw: 0
+    scale_angular:
+      yaw: 0.5
+
+    enable_button: 2  # Left trigger button
+    enable_turbo_button: 5  # Right trigger button
+
+
+# Axes: 
+# 0 - Left Joy X 
+# 1 - Left Joy Y 
+# 2 - Right Joy X 
+# 3 - Right Joy Y 
+# 4 - RT 
+# 5 - RT 
+# 6 - D Pad X 
+# 7 - D Pad Y 
+
+# Buttons: 
+# 0 - A 
+# 1 - B
+# 2 - NONE
+# 3 - X
+# 4 - Y
+# 5 - NONE 
+# 6 - LB 
+# 7 - RB 
+# 8 - LT
+# 9 - RT 
+# 10 - Minus
+# 11 - Plus 
+# 12 - Center Heart 
+# 13 - Left joystick press
+# 14 - Righ joystick press 
+
+

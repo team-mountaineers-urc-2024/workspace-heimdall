@@ -1,0 +1,4 @@
+bool save_quality_image
+---
+sensor_msgs/Image quality_image
+sensor_msgs/CameraInfo quality_image_info

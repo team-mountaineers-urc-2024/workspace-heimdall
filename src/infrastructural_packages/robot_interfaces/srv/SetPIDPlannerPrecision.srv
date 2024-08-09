@@ -1,0 +1,6 @@
+# Request - precision of path planner (distance to get within goal)
+float64 precision
+---
+# Response - T/F
+bool success
+string message

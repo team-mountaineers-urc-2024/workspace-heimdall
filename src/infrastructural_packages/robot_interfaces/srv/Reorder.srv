@@ -1,0 +1,5 @@
+int64 initial_index
+int64 new_index
+---
+string message
+geometry_msgs/PointStamped[] list

@@ -1,0 +1,4 @@
+int8 cuvette_id
+---
+bool is_successful
+int8 end_position

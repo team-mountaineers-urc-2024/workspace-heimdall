@@ -1,0 +1,4 @@
+UrcCustomPoint center
+float64 radius
+---
+UrcCustomPath path

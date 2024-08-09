@@ -1,0 +1,131 @@
+repositories:
+
+# -----------------
+# Autonomy Packages
+
+  autonomy/system/behavior_tree_pkg:
+    type: git
+    url: git@github.com:team-mountaineers-urc-2024/behavior_tree_pkg.git
+    version: main
+
+  autonomy/output/pid_controller_lib:
+    type: git
+    url: git@github.com:team-mountaineers-urc-2024/pid_controller_lib.git
+    version: main
+
+  autonomy/output/search_pkg:
+    type: git
+    url: git@github.com:team-mountaineers-urc-2024/search_pkg.git
+    version: main
+
+  autonomy/input/ros2_aruco:
+      type: git
+      url: git@github.com:team-mountaineers-urc-2024/ros2_aruco.git
+      version: main
+
+  autonomy/input/yolo_detection_pkg:
+    type: git
+    url: git@github.com:team-mountaineers-urc-2024/yolo_detection_pkg.git
+    version: main
+
+  autonomy/input/object_localization_pkg:
+    type: git
+    url: git@github.com:team-mountaineers-urc-2024/object_localization_pkg.git
+    version: main
+
+  autonomy/ros2_pid_planner_pkg:
+    type: git
+    url: git@github.com:team-mountaineers-urc-2024/ros2_pid_planner_pkg.git
+    version: main
+
+  autonomy/autonomy_led_pkg:
+    type: git
+    url: git@github.com:team-mountaineers-urc-2024/autonomy_led_pkg.git
+    version: main
+  
+  autonomy/autonomy_code:
+    type: git
+    url: git@github.com:team-mountaineers-urc-2024/autonomy_code.git
+    version: main
+
+# ----------------
+# Control Packages
+
+  control_packages/drivetrain_control_pkg:
+    type: git
+    url: git@github.com:team-mountaineers-urc-2024/drivetrain_control_pkg.git
+    version: main
+
+  control_packages/science_control_pkg:
+    type: git
+    url: git@github.com:team-mountaineers-urc-2024/science_control_pkg.git
+    version: main
+
+  control_packages/manipulator_control_pkg:
+    type: git
+    url: git@github.com:team-mountaineers-urc-2024/manipulator_control_pkg.git
+    version: main
+
+  control_packages/motor_protection_pkg:
+    type: git
+    url: git@github.com:team-mountaineers-urc-2024/motor_protection.git
+    version: main
+
+# --------------------
+# Hardware Interfacing 
+
+  hardware_interfacing/can_interface_pkg:
+    type: git
+    url: git@github.com:team-mountaineers-urc-2024/can_interface_pkg.git
+    version: main
+
+  hardware_interfacing/myactuator_lib:
+    type: git
+    url: git@github.com:team-mountaineers-urc-2024/myactuator_lib.git
+    version: main
+
+  hardware_interfacing/dynamixel_lib:
+    type: git
+    url: git@github.com:team-mountaineers-urc-2024/dynamixel_lib.git
+    version: main
+
+  hardware_interfacing/cubemars_lib:
+    type: git
+    url: git@github.com:team-mountaineers-urc-2024/cubemars_lib.git
+    version: main
+
+# ------------------------
+# Infrastructural Packages
+
+  infrastructural_packages/comms_heartbeat_pkg:
+    type: git
+    url: git@github.com:team-mountaineers-urc-2024/comms_heartbeat_pkg.git
+    version: main
+
+# ------------------
+# Sensor Interfacing 
+
+  sensor_interfacing/usb_camera_pkgs:
+    type: git
+    url: git@github.com:team-mountaineers-urc-2024/usb_camera_pkgs.git
+    version: main
+
+  sensor_interfacing/velodyne:
+    type: git
+    url: git@github.com:ros-drivers/velodyne.git
+    version: ros2
+
+# ------------------
+# Simulation
+  simulation/simulation2024:
+    type: git
+    url: git@github.com:team-mountaineers-urc-2024/simulation2024.git
+    version: main
+
+# ------------------
+# user Interfacing 
+
+  user_interfacing/heimdall_gui:
+    type: git
+    url: git@github.com:team-mountaineers-urc-2024/heimdall_gui.git
+    version: main

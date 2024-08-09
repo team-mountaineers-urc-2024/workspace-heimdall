@@ -1,0 +1,5 @@
+WaypointObject waypoint
+string list
+---
+string message
+WaypointObject[] list

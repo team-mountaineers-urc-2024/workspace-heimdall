@@ -1,0 +1,4 @@
+string list
+---
+string message
+geometry_msgs/PointStamped[] list
